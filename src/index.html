@@ -68,10 +68,10 @@
       
     </div>
 
-    <div class="bio h-screen flex flex-col" >
+    <div class="bio bg-blue-50 h-screen flex flex-col" >
         <h1 class="font-space text-9xl right-0 absolute bg-black text-white px-16 py-4 rounded-bl-4xl">Bio</h1>
 
-        <p class="pt-44 font-pop text-2xl px-4 pb-4 "><span class="text-5xl font-kle">Lavy</span> é alagoana, tem 27 anos, com uma carreira musical que se estende por quase uma década.</p>
+        <p class="pt-40 font-pop text-2xl px-4 pb-4 "><span class="text-5xl font-kle">Lavy</span> é alagoana, tem 27 anos, com uma carreira musical que se estende por quase uma década.</p>
         <p class="font-pop text-2xl px-4 pb-7">Seu repertório engloba músicas dos gêneros MPB, Blues, Rock e Jazz.</p>
         <p class="font-pop text-2xl px-5 pb-4 text-end">Em 2016, começou sua carreira como vocalista da banda DBermudas, realizando seu primeiro show no Teatro de Arena em Maceió.
         </p>
@@ -80,6 +80,92 @@
         </p>
         
     </div>
+  
+
+  <div class="fotos bg-black h-screen">
+      <div class="carrossel relative w-full max-w-md mx-auto overflow-hidden">
+        <div class="flex transition-transform duration-500" id="carousel">
+          <div class="min-w-full h-[85vh]">
+            <img src="../assets/images/foto1.jpeg" alt="Imagem 1" class="w-full h-full object-cover">
+          </div>
+          <div class="min-w-full h-[85vh]">
+            <img src="../assets/images/foto2.jpeg" alt="Imagem 2" class="w-full h-full object-cover">
+          </div>
+          <div class="min-w-full h-[85vh]">
+            <img src="../assets/images/foto3.jpeg" alt="Imagem 3" class="w-full h-full object-cover">
+          </div>
+          <div class="min-w-full h-[85vh]">
+            <img src="../assets/images/foto4.jpeg" alt="Imagem 4" class="w-full h-full object-cover">
+          </div>
+       
     
+        <!-- Botões de navegação -->
+        <button id="prev" class="absolute top-1/2 left-0 transform -translate-y-1/2 p-2 bg-gray-700 bg-opacity-50 text-white">‹</button>
+        <button id="next" class="absolute top-1/2 right-0 transform -translate-y-1/2 p-2 bg-gray-700 bg-opacity-50 text-white">›</button>
+      </div> 
+        <!-- Botões de navegação -->
+        <button id="prev" class="absolute top-1/2 left-0 transform -translate-y-1/2 p-2 bg-gray-700 bg-opacity-50 text-white">‹</button>
+        <button id="next" class="absolute top-1/2 right-0 transform -translate-y-1/2 p-2 bg-gray-700 bg-opacity-50 text-white">›</button>
+       
+      </div>
+
+      <div class="flex-grow flex items-center justify-center bg-black">
+        <h1 class="font-space text-9xl text-white bg-black pt-2">Fotos</h1>
+      </div>
+  </div>
+    
+
+  <div class="videos bg-blue-950 h-screen" ></div>
+
+
+    <script>
+      let currentSlide = 0;
+      const slides = document.querySelectorAll("#carousel > div");
+      const totalSlides = slides.length;
+      const carousel = document.getElementById("carousel");
+    
+      function updateCarousel() {
+        if (currentSlide === totalSlides - 1) {
+          setTimeout(() => {
+            carousel.style.transition = 'none';
+            currentSlide = 0;
+            carousel.style.transform = `translateX(0)`;
+          }, 500); // Duração da transição antes de pular para o primeiro slide
+        } else {
+          carousel.style.transition = 'transform 0.5s ease-in-out';
+        }
+        carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+      }
+    
+      function nextSlide() {
+        if (currentSlide < totalSlides - 1) {
+          currentSlide++;
+        } else {
+          currentSlide = 0;
+        }
+        updateCarousel();
+      }
+    
+      let autoPlayInterval = setInterval(nextSlide, 3000); // Troca de slide a cada 3 segundos
+    
+      document.getElementById("next").addEventListener("click", () => {
+        clearInterval(autoPlayInterval);
+        nextSlide();
+        autoPlayInterval = setInterval(nextSlide, 3000);
+      });
+    
+      document.getElementById("prev").addEventListener("click", () => {
+        clearInterval(autoPlayInterval);
+        if (currentSlide === 0) {
+          currentSlide = totalSlides - 2; // Pula para o último slide real
+          carousel.style.transition = 'none';
+          carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+        } else {
+          currentSlide--;
+        }
+        updateCarousel();
+        autoPlayInterval = setInterval(nextSlide, 3000);
+      });
+    </script>
 </body>
 </html>

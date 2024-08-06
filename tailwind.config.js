@@ -3,9 +3,13 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     borderRadius:{
-      '4xl': '4rem'
+      '4xl': '4rem',
+      '3xl': '3rem',
+      '2xl': '2rem',
+      'xl': '1rem',
+      'lg': '0.5rem',
+      'md': '0.3rem',
     },
-
 
     extend: {
       height:{
@@ -26,6 +30,12 @@ module.exports = {
         'h2': '2rem',
         'h3': '1rem',
       },
+      boxShadow: {
+        'custom':'8px 8px 0 -1px rgba(0, 0, 0, 1)',
+        'round':'5px 5px 0 0 rgba(0, 0, 0, 1)',
+      },
+
+
     },
   },
   plugins: [],

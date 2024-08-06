@@ -10,7 +10,7 @@
 
 </head>
 <body>
-    <div class="home h-screen bg-cover bg-top bg-no-repeat opacity-86" style="background-image: url('../assets/images/home.jpeg');" >
+    <div id="home" class="h-screen bg-cover bg-top bg-no-repeat opacity-86" style="background-image: url('../assets/images/home.jpeg');" >
         
 
         <div class="navMin bg-black bg-opacity-45 h-12 fixed top-0 inset-x-0 z-50">
@@ -21,17 +21,17 @@
 
 
         <div class="buttons absolute inset-x-0 top-1/2 transform translate-y-1/2 flex flex-col items-center gap-6 text-center font-pop">
-            <div class="bg-blue-400 text-black w-32 text-2xl text-center">
+            <div class="bg-blue-400 text-black w-64 text-2xl text-center shadow-custom rounded-md">
               <a href="#dates" class="block p-4">
                 Datas
               </a>
             </div>
-            <div class="bg-blue-400 text-black w-32 text-2xl text-center">
+            <div class="bg-blue-400 text-black w-64 text-2xl text-center shadow-custom rounded-md">
               <a href="#midia" class="block p-4">
                 Mídia
               </a>
             </div>
-            <div class="bg-blue-400 text-black w-32 text-2xl text-center">
+            <ddiv class="bg-blue-400 text-black w-64 text-2xl text-center shadow-custom rounded-md">
               <a href="#bio" class="block p-4">
                 Bio
               </a>
@@ -42,7 +42,7 @@
 
     </div>
 
-    <div class="dates bg-black h-screen flex items-center justify-start text-blue-300">
+    <div id="dates" class="bg-black h-screen flex items-center justify-start text-blue-300">
 
         <img src="../assets/images/datas.png" alt="datas-font-monsterRock" class="max-h-screen">
 
@@ -68,7 +68,7 @@
       
     </div>
 
-    <div class="bio bg-blue-50 h-screen flex flex-col" >
+    <div id="bio" class="bg-blue-50 h-screen flex flex-col" >
         <h1 class="font-space text-9xl right-0 absolute bg-black text-white px-16 py-4 rounded-bl-4xl">Bio</h1>
 
         <p class="pt-40 font-pop text-2xl px-4 pb-4 "><span class="text-5xl font-kle">Lavy</span> é alagoana, tem 27 anos, com uma carreira musical que se estende por quase uma década.</p>
@@ -82,7 +82,7 @@
     </div>
   
 
-  <div class="fotos bg-black h-screen">
+    <div id="midia" class="bg-black h-screen">
       <div class="carrossel relative w-full max-w-md mx-auto overflow-hidden">
         <div class="flex transition-transform duration-500" id="carousel">
           <div class="min-w-full h-[85vh]">
@@ -97,75 +97,90 @@
           <div class="min-w-full h-[85vh]">
             <img src="../assets/images/foto4.jpeg" alt="Imagem 4" class="w-full h-full object-cover">
           </div>
-       
-    
-        <!-- Botões de navegação -->
-        <button id="prev" class="absolute top-1/2 left-0 transform -translate-y-1/2 p-2 bg-gray-700 bg-opacity-50 text-white">‹</button>
-        <button id="next" class="absolute top-1/2 right-0 transform -translate-y-1/2 p-2 bg-gray-700 bg-opacity-50 text-white">›</button>
-      </div> 
-        <!-- Botões de navegação -->
-        <button id="prev" class="absolute top-1/2 left-0 transform -translate-y-1/2 p-2 bg-gray-700 bg-opacity-50 text-white">‹</button>
-        <button id="next" class="absolute top-1/2 right-0 transform -translate-y-1/2 p-2 bg-gray-700 bg-opacity-50 text-white">›</button>
-       
+          <!-- Copia do primeiro slide -->
+          <div class="min-w-full h-[85vh]">
+            <img src="../assets/images/foto1.jpeg" alt="Imagem 1" class="w-full h-full object-cover">
+          </div>
+        </div>
       </div>
-
+    
       <div class="flex-grow flex items-center justify-center bg-black">
-        <h1 class="font-space text-9xl text-white bg-black pt-2">Fotos</h1>
+        <h1 class="font-space text-9xl text-white bg-black">Fotos</h1>
       </div>
-  </div>
+      </div>
+    
     
 
-  <div class="videos bg-blue-950 h-screen" ></div>
+  <div class="contato bg-white h-screen flex justify-center items-center" >
+
+    <div class="w-5/6 h-3/4 bg-blue-300 font-pop p-10 shadow-custom border-2 border-black rounded-lg  ">
+      <h1 class="text-h1 ">Contato</h1>
+        <div class="flex space-x-12 pb-10 justify-center">
+            <img src="../assets/images/instagram-logo-84.png" alt="instagram" class="bg-white h-14 p-2 rounded-2xl shadow-round">
+            <img src="../assets/images/whatsapp-logo-84.png" alt="instagram" class="bg-white h-14 p-2 rounded-2xl shadow-round">
+        </div> 
+      
+    
+
+           
+
+
+      <h3 class="text-lg pb-2">Ou envie uma mensagem</h3>
+
+      <input type="text" placeholder="Nome" class="mb-5 p-2 text-sm w-60 border-2 rounded-md shadow-round font-extrabold">
+      <input type="text" placeholder="Email" class="mb-5 p-2 text-sm w-60 border-2 rounded-md shadow-round font-extrabold">
+      <input type="text" placeholder="Telefone" class="mb-5 p-2 text-sm w-60 border-2 rounded-md shadow-round font-extrabold">
+      <input type="text" placeholder="Sua mensagem" class="mb-5 p-2 text-sm w-60 h-60 border-2 rounded-md shadow-round font-extrabold">
+
+      <button>Enviar →</button>
+
+    </div>
+
+  </div>
 
 
     <script>
-      let currentSlide = 0;
-      const slides = document.querySelectorAll("#carousel > div");
-      const totalSlides = slides.length;
-      const carousel = document.getElementById("carousel");
-    
-      function updateCarousel() {
-        if (currentSlide === totalSlides - 1) {
-          setTimeout(() => {
-            carousel.style.transition = 'none';
-            currentSlide = 0;
-            carousel.style.transform = `translateX(0)`;
-          }, 500); // Duração da transição antes de pular para o primeiro slide
-        } else {
-          carousel.style.transition = 'transform 0.5s ease-in-out';
-        }
-        carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
-      }
-    
-      function nextSlide() {
-        if (currentSlide < totalSlides - 1) {
-          currentSlide++;
-        } else {
-          currentSlide = 0;
-        }
-        updateCarousel();
-      }
-    
-      let autoPlayInterval = setInterval(nextSlide, 3000); // Troca de slide a cada 3 segundos
-    
-      document.getElementById("next").addEventListener("click", () => {
-        clearInterval(autoPlayInterval);
-        nextSlide();
-        autoPlayInterval = setInterval(nextSlide, 3000);
-      });
-    
-      document.getElementById("prev").addEventListener("click", () => {
-        clearInterval(autoPlayInterval);
-        if (currentSlide === 0) {
-          currentSlide = totalSlides - 2; // Pula para o último slide real
-          carousel.style.transition = 'none';
-          carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
-        } else {
-          currentSlide--;
-        }
-        updateCarousel();
-        autoPlayInterval = setInterval(nextSlide, 3000);
-      });
+    let currentSlide = 0;
+const slides = document.querySelectorAll("#carousel > div");
+const totalSlides = slides.length;
+const carousel = document.getElementById("carousel");
+
+function updateCarousel() {
+  if (currentSlide === totalSlides - 1) {
+    setTimeout(() => {
+      carousel.style.transition = 'none';
+      currentSlide = 0;
+      carousel.style.transform = `translateX(0)`;
+    }, 500); // Duração da transição antes de pular para o primeiro slide
+  } else {
+    carousel.style.transition = 'transform 0.5s ease-in-out';
+  }
+  carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+
+function nextSlide() {
+  if (currentSlide < totalSlides - 1) {
+    currentSlide++;
+  } else {
+    currentSlide = 0;
+  }
+  updateCarousel();
+}
+
+let autoPlayInterval = setInterval(nextSlide, 3000); // Troca de slide a cada 3 segundos
+
+carousel.addEventListener("transitionend", () => {
+  // Quando a transição terminar e estivermos na cópia do primeiro slide
+  if (currentSlide === totalSlides - 1) {
+    carousel.style.transition = 'none';
+    currentSlide = 0;
+    carousel.style.transform = `translateX(0)`;
+    // Força o reflow para reiniciar a transição
+    carousel.offsetHeight; 
+    carousel.style.transition = 'transform 0.5s ease-in-out';
+  }
+});
+
     </script>
 </body>
 </html>

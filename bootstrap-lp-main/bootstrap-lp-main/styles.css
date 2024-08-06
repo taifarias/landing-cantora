@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+@font-face{
+  font-family: 'Quirus Font';
+  src: url(fonts/quirosdemoregular-2v19o.otf); 
+}
+@font-face {
+  font-family: 'Mundial Narrow';
+  src: url(fonts/Retro\ Kraf.otf);
+}
+
+@font-face{
+  font-family: "Poppins";
+  src: url(fonts/Poppins/Poppins-Light.ttf)
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar {
+  width: 100vw;
+}
+
+.navbar-brand{
+  height: 50px;
+}
+.nav-item{
+  font-family: "Quirus Font";
+}
+
+.section{
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-size: cover;      
+}
+.home{
+    background-image: url(images/home.jpeg); 
+    font-family: "Quirus Font";  
+
+  }
+
+.home button {
+    --bg: #000;
+    --hover-bg: hsl(221, 73%, 78%);
+    --hover-text: #000;
+    color: var(--hover-text);
+    cursor: pointer;
+    border: 1px solid var(--hover-bg);
+    border-radius: 4px;
+    padding: 0.4em 0.1em;
+    background: var(--hover-bg);
+    transition: 0.2s;
+    margin-bottom: 30px;   
+    box-shadow: 0.25rem 0.25rem #000; 
+    font-size: 23px;
+    letter-spacing: 3px;
+    font-weight: 400;
+  }  
+    .home button:hover {
+    color: #000;
+    transform: translate(-0.25rem, -0.25rem);
+    background:  #90a1ff;
+    box-shadow: 0.25rem 0.25rem #000;
+  }
+    .home button:active {
+    transform: translate(0);
+    box-shadow: none;
+  }
+
+  @media (min-width: 768px) {
+  
+
+  }
+
+
+
+
+    .dates{
+    background-color: #000;
+  }
+.dates h1{
+  font-family: 'Quirus Font';
+  color: rgb(255, 255, 255);
+  font-size: 250px;
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+  border: solid 2px;
+  border-color: rgb(255, 255, 255);
+  margin-top: 0px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  margin-right: 300px;
+  line-height: 150px;
+}
+.dataLocal{
+  position: absolute;
+  margin-top: -800px;
+  margin-left: 170px;
+  }
+.dataLocal h2{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 30px;
+  margin-bottom: 60px;
+
+  color: hsl(222, 45%, 78%);
+  text-shadow: 5px 5px white;
+  font-family: 'Poppins';
+  font-size: 30px;
+  font-weight: normal;
+  text-shadow: 2px 3px #012342;
+  border: solid 2px;
+  border-color: rgb(255, 255, 255);
+}
+
+
+
+.bio h1{
+  background-color: #000;
+  color: white;  
+  margin-top: 40px;
+  font-family: 'Quirus Font';
+  font-size: 150px;    
+  height: 180px;
+  margin-left: 50px;
+  padding-left: 25px;
+  padding-right: 150px;
+  border-top-left-radius: 25%;
+  border-bottom-right-radius: 15%;
+  margin-bottom: 50px;
+
+}
+
+.bio p{
+  font-family: "Poppins";
+  font-size: 22px;
+  font-weight: 400;
+}
+
+
+
+
+.carousel-item active{
+  height: 20px;
+}
+.midia{
+  height: 200vh;
+  background-color: #000;
+}
+.midia h1{
+  font-family: 'Quirus Font';
+  color: rgb(255, 255, 255);
+  border: 2px white solid;
+  margin-bottom: 0;
+ 
+  
+}
+.carousel-control-prev{
+  height: 700px;  
+}
+.carousel-control-next{
+  height: 700px;  
+}
+
+
+
+.destaque{
+  display:none;
+}
+
+
+
+
+
+
+.contato {
+ width: 380px;
+ margin-left: 15px;
+ 
+ 
+}
+.form {
+  --input-focus: #2d8cf0;
+  --font-color: #323232;
+  --font-color-sub: #5a5757;
+  --bg-color: beige;
+  --main-color: black;
+  padding: 20px;
+  background: lightblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  
+}
+.title {
+  color: var(--font-color);
+  font-family: 'Quirus Font';
+  font-weight: 900;
+  font-size: 60px;
+  margin-bottom: 25px;
+  margin-left: -50px; 
+  line-height: 50px;
+  letter-spacing: 3px;
+
+
+}
+.title span {
+  color: var(--font-color-sub);
+  font-weight: 600;
+  font-size: 25px;
+  margin-left: 20px;
+  letter-spacing: 2px;
+}
+.input {
+  width: 250px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--font-color);
+  padding: 5px 10px;
+  outline: none;
+}
+.input::placeholder {
+  color: var(--font-color-sub);
+  opacity: 0.8;
+}
+.input:focus {
+  border: 2px solid var(--input-focus);
+}
+#box-message{
+  height: 200px;
+}
+.login-with {
+  display: flex;
+  gap: 20px;
+}
+.button-log {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  color: var(--font-color);
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-log img {
+  height: 30px;
+  
+}
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--main-color);
+}
+.button-log:active, .button-confirm:active {
+  box-shadow: 0px 0px var(--main-color);
+  transform: translate(3px, 3px);
+}
+.button-confirm {
+  margin: 50px auto 0 auto;
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--font-color);
+  cursor: pointer;
+}
+
+

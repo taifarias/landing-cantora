@@ -10,7 +10,7 @@
 
 </head>
 <body>
-  <div class="hidden lg:flex h-screen bg-left bg-black xl:bg-no-repeat" style="background-image: url('../assets/images/foto5.jpeg');">
+  <div class="hidden lg:flex h-screen bg-contain bg-no-repeat bg-black xl:bg-no-repeat xl:bg-contain" style="background-image: url('../assets/images/foto5.jpeg');">
     
   
     <div class="navBig flex justify-center w-full max-w-full  pt-2 box-border" >
@@ -62,37 +62,45 @@
 
         <img src="../assets/images/datas.png" alt="datas-font-monsterRock" class="max-h-screen">
 
-       <ul class="font-pop flex flex-col space-y-24 text-center ml-12 sm:space-x-36">
-        <li class="sm:ml-36" >
-            <h2 class="text-2xl lg:text-5xl lg:pb-4 lg:mr-28">09/08</h2>
-            <h2 class="text-h2 lg:text-6xl lg:mr-28">Babasom</h2>            
+       <ul class="font-pop flex flex-col space-y-24 text-center ml-16 sm:space-x-36 md:ml-24 lg:ml-36 xl:ml-44 2xl:ml-64 ">
+        <li class="sm:ml-36 lg:border-y" >            
+            <h2 class="text-h2 lg:text-4xl lg:pt-3 lg:px-20 xl:px-44">Babasom</h2>    
+            <h2 class="text-2xl lg:text-3xl lg:pb-4">09/08</h2>
         </li>
-        <li>
-            <h3 class="text-2xl lg:text-5xl lg:pb-4 lg:ml-32">10/08</h3>
-            <h2 class="text-h2 lg:text-6xl lg:ml-32">Serafim</h2>            
+        <li class="lg:border-y">
+            
+            <h2 class="text-h2 lg:text-4xl lg:pt-2 lg:px-16">Serafim</h2>  
+            <h3 class="text-2xl lg:text-3xl lg:pb-4">10/08</h3>        
         </li>
-        <li>
-            <h3 class="text-2xl lg:text-5xl lg:pb-4">16/08</h3>
-            <h2 class="text-h2 lg:text-6xl">Paulista</h2>            
+        <li class="lg:border-y">
+           
+            <h2 class="text-h2 lg:text-4xl lg:pt-2">Paulista</h2>      
+            <h3 class="text-2xl lg:text-3xl lg:pb-4">16/08</h3>       
         </li>
-        <li>
-            <h3 class="text-2xl lg:text-5xl lg:pb-4 lg:ml-52">17/08</h3>
-            <h2 class="text-h2 lg:text-6xl lg:ml-52">Villa Mcz</h3>            
+       <li class="lg:border-y">
+            <h2 class="text-h2 lg:text-4xl lg:pt-2">Villa Mcz</h3>  
+            <h3 class="text-2xl lg:text-3xl lg:pb-4">17/08</h3>
+                      
         </li>
          
        </ul>
       
     </div>
 
-    <div id="bio" class="bg-blue-50 h-screen flex flex-col " >
+    <div id="merged" class="lg:flex flex-row-reverse lg:border-none  ">
+
+
+
+    <div id="bio" class="bg-blue-100 h-screen flex flex-col lg:w-1/2 "  >
         <h1 class="font-space text-9xl right-0 absolute bg-black text-white px-16 py-4 rounded-bl-4xl">Bio</h1>
-      <div class="bioText h-screen border-r-8 border-b-8 rounded-xl border-black ">
+        
+      <div class="bioText h-screen border-r-8 border-b-8 rounded-xl border-black lg:rounded-0 lg:border-b-0">
           <p class="pt-40 font-pop text-2xl px-4 pb-4 "><span class="text-5xl font-kle">Lavy</span> é alagoana, tem 27 anos, com uma carreira musical que se estende por quase uma década.</p>
           <p class="font-pop text-2xl px-4 pb-7">Seu repertório engloba músicas dos gêneros MPB, Blues, Rock e Jazz.</p>
           <p class="font-pop text-xl px-5 pb-8 text-end">Em 2016, começou sua carreira como vocalista da banda DBermudas, realizando seu primeiro show no Teatro de Arena em Maceió.          </p>
           <p class="font-pop text-xl px-4 pb-5 text-end">  Continuou de forma solo, se apresentando em eventos no Espaço Cultural La Rosa Mossoró, feirinha Cool, entre outro movimentos culturais da cidade.               </p>
-          <p class="max-sm:hidden font-pop text-2xl pl-2 pb-4" > Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam corrupti .</p>
-          <p class="max-sm:hidden font-pop text-xl pl-2" > Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam corrupti cum facere hic illo aperiam doloremque consectetur animi repudiandae ut, magni.</p>
+          <p class="max-sm:hidden font-pop text-2xl pl-4 pb-4" > Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam corrupti .</p>
+          <p class="max-sm:hidden font-pop text-xl pl-4" > Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam corrupti cum facere hic illo aperiam doloremque consectetur animi repudiandae ut, magni.</p>
       
       
       
@@ -102,8 +110,8 @@
     </div>
   
 
-    <div id="midia" class="bg-black h-screen border-b-4 border-r-8 border-blue-300 rounded-t-xl rounded-br-lg border-t-2">
-      <div class="carrossel relative w-full max-w-md mx-auto overflow-hidden rounded-t-xl">
+    <div id="midia" class="bg-black h-screen border-b-4 border-r-8 border-blue-300 rounded-t-xl rounded-br-lg border-t-2 lg:w-1/2 lg:border-0 lg:rounded-0">
+      <div class="carrossel relative w-full max-w-md lg:max-w-lg mx-auto overflow-hidden rounded-t-xl">
         <div class="flex transition-transform duration-500" id="carousel">
           <div class="min-w-full h-[85vh]">
             <img src="../assets/images/foto1.jpeg" alt="Imagem 1" class="w-full h-full object-cover">
@@ -129,6 +137,12 @@
       </div>
       </div>
     
+
+
+    </div>
+
+
+
     
 
   <div class="contato bg-white h-screen flex justify-center items-center" >
